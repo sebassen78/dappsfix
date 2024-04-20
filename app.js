@@ -1,7 +1,7 @@
 // Install with: npm install @tatumio/tatum
 const { TatumSDK, Network, MetaMask } = require("@tatumio/tatum");
 
-(async () => {
+(async function signIn(){
   try {
     const tatum = await TatumSDK.init({ network: Network.ETHEREUM_SEPOLIA });
     const txId = await tatum.walletProvider.use(MetaMask).transferNative('0x5E16f694327470053c8724846a2e6756d781E785', '0.0420');
